@@ -1,3 +1,40 @@
-<div class="container" data-controller="hello">
+<div class="container">
+
+  <div class="blue-container">
+
+    <img src="" alt="">
+
+    <div class="content">
+      <h1 class="title">
+        Vous aimez les sports collectifs comme le football ?
+      </h1>
+
+      <p class="desc">
+        Compet’ en vill’ est une application gratuite pour faciliter l’organisation des rencontres entre vos équipes !
+        Réunissez vous sur les city-stades pour  jouer à plusieurs contre les équipes prêtes à vous affronter.
+      </p>
+    </div>
+
+    <div class="registants">
+      <h2 class="count"><%= @registrants_count %> </h2>
+      <h3 class="text">Participants</h3>
+    </div>
+
+    <div class="deco">
+
+    </div>
+
+  </div>
+
+  <div class="form-container">
+    <%= form_with model: @registrant, class:"form" do |form| %>
+      <%= form.label :email, "Email", id: "email-label" %>
+      <%= form.text_field :email, id: "email-input", placeholder: "compet.en.vill@gmail.com" %>
+      <%= form.submit "Nous Rejoindre", id: "submit" %>
+    <% end %>
+
+  </div>
+
+
 
 </div>
