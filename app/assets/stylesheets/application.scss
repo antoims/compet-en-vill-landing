@@ -1,6 +1,15 @@
+@import "config/colors";
+@import "components/index";
+@import "font-awesome";
+
 body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
 @import "config/WEB ClashDisplay/css/clash-dislay";
 @import "config/WEB Switzer/css/switzer";
+

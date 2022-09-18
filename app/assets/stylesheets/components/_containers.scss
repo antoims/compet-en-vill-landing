@@ -1,0 +1,84 @@
+.blue-container {
+  background-color: $blue;
+  color: white;
+  height: 60vh;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  overflow: hidden;
+  position: relative;
+  .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    .title {
+
+    }
+    .desc {
+      color: rgb(224, 224, 224);
+    }
+
+  }
+  .registants {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    .count {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .text {
+      font-size: 3rem;
+      font-weight: 400;
+    }
+  }
+
+  .deco {
+    height: 28vh;
+    width: 200vw;
+    background-color: $dark-blue;
+    position: absolute;
+    bottom: -15vh;
+    left: -50vw;
+    transform: rotate(-17deg);
+  }
+
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 80vw;
+    #email-label {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.86);
+    }
+    #email-input {
+      border-radius: 3px;
+      padding: 10px;
+      border: 1px solid $blue;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+      &:focus-visible {
+        border: 1px solid $dark-blue !important;
+        outline: none;
+      }
+    }
+    #submit {
+      border: none;
+      background-color: $blue;
+      color: white;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+}

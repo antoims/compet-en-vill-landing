@@ -1,0 +1,42 @@
+.alert {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  animation: alert-pop-in 0.3s ease-in-out;
+
+  &.success {
+    background-color: $light-blue;
+    color: $blue;
+  }
+
+  &.error {
+    background-color: #F7D7D7;
+    color: #E84848;
+  }
+
+  // cross
+  .fa-xmark {
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+}
+
+@keyframes alert-pop-in {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
