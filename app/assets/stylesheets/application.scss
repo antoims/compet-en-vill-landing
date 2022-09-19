@@ -1,3 +1,5 @@
+@import url('config/fonts/clash/css/clash-display.scss');
+@import url('config/fonts/switzer/css/switzer.scss');
 @import "config/colors";
 @import "components/index";
 @import "font-awesome";
@@ -8,7 +10,5 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  font-family: 'ClashDisplay-Regular';
 }
-
-@import "config/fonts/WEB\ ClashDisplay/css/clash-display";
-@import "config/fonts/WEB\ Switzer/css/switzer";
