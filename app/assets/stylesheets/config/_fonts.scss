@@ -1,0 +1,74 @@
+// Define fonts for body and headers
+$title-font: "SwitzerBold";
+$subtitle-font: "SwitzerSemibold";
+$body-font: "SwitzerRegular";
+
+$compteur-font: "ClashDisplayBold";
+
+
+@font-face {
+  font-family: 'SwitzerLight';
+  src: url('fonts/Switzer-Light.woff2'),
+       url('fonts/Switzer-Light.woff'),
+       url('fonts/Switzer-Light.ttf');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'SwitzerRegular';
+  src: url('fonts/Switzer-Regular.woff2'),
+       url('fonts/Switzer-Regular.woff'),
+       url('fonts/Switzer-Regular.ttf');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'SwitzerMedium';
+  src: url('fonts/Switzer-Medium.woff2'),
+       url('fonts/Switzer-Medium.woff'),
+       url('fonts/Switzer-Medium.ttf');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SwitzerSemibold';
+  src: url('fonts/Switzer-Semibold.woff2'),
+       url('fonts/Switzer-Semibold.woff')
+       url('fonts/Switzer-Semibold.ttf');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SwitzerBold';
+  src: url('fonts/Switzer-Bold.woff2'),
+       url('fonts/Switzer-Bold.woff'),
+       url('fonts/Switzer-Bold.ttf');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ClashDisplayBold';
+  src: url('ClashDisplay-Bold.woff2'),
+       url('ClashDisplay-Bold.woff'),
+       url('ClashDisplay-Bold.ttf');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}

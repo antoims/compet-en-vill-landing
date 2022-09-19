@@ -1,4 +1,5 @@
 @import "config/colors";
+@import "config/fonts";
 @import "components/index";
 @import "font-awesome";
 
@@ -9,6 +10,3 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
-
-@import "config/fonts/WEB\ ClashDisplay/css/clash-display";
-@import "config/fonts/WEB\ Switzer/css/switzer";
