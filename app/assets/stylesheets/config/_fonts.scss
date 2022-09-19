@@ -1,10 +1,17 @@
 // Define fonts for body and headers
-$title-font: "SwitzerBold";
-$subtitle-font: "SwitzerSemibold";
-$body-font: "SwitzerRegular";
+// $title-font: "SwitzerBold";
+// $subtitle-font: "SwitzerSemibold";
+// $body-font: "SwitzerRegular";
 
 $compteur-font: "ClashDisplayBold";
 
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('fonts/Switzer-Variable.woff2'),
+       url('fonts/Switzer-Variable.woff'),
+       url('fonts/Switzer-Variable.ttf');
+}
 
 @font-face {
   font-family: 'SwitzerLight';
