@@ -25,13 +25,13 @@
 
       .title {
         z-index: 2;
-        font-family: $title-font;
+        // font-family: $title-font;
         font-size: 1.6rem;
       }
       .desc {
         z-index: 2;
         font-size: 1rem;
-        font-family: $body-font;
+        // font-family: $body-font;
         color: rgb(224, 224, 224);
       }
       @media (min-width: 720px) {
@@ -57,12 +57,12 @@
       flex-direction: column;
       z-index: 2;
       .count {
-        font-family: $compteur-font;
+        // font-family: $compteur-font;
         font-size: 3rem;
         font-weight: 700;
       }
       .text {
-        font-family: $subtitle-font;
+        // font-family: $subtitle-font;
         font-size: 3rem;
         font-weight: 400;
       }
