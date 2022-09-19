@@ -7,8 +7,7 @@ class RegistrantsController < ApplicationController
       SlackNotificationService.new(@registrant).call
       redirect_to root_path, notice: "Merci pour votre inscription !"
     else
-      p @registrant.errors.full_messages
-      redirect_to root_path, alert: @registrant.errors.full_messages.join(", ")
+      redirect_to root_path, alert: "Une erreur est survenue, veuillez réessayer."
     end
 
   end

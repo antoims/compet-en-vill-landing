@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+  border-radius: 2px;
   animation: alert-pop-in 0.3s ease-in-out;
 
   &.success {
