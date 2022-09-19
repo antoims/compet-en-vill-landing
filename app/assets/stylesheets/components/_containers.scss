@@ -131,13 +131,14 @@
         }
       }
       #submit {
-        border: none;
         background-color: $blue;
         color: white;
-        border-radius: 3px;
+        border-radius: 3px !important;
         font-weight: 700;
         font-size: 1rem;
         padding: 11px;
+        display: flex;
+        justify-content: center;
       }
     }
   }
