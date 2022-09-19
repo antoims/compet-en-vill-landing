@@ -3,8 +3,8 @@
   .blue-container {
     background-color: $blue;
     color: white;
-    height: 54vh;
-    padding: 8vh 8vw;
+    height: 57vh;
+    padding: 5vh 8vw;
     padding-top: 10vh;
     display: flex;
     flex-direction: column;
@@ -30,7 +30,7 @@
       }
       .desc {
         z-index: 2;
-        font-size: 1rem;
+        font-size: 1.1rem;
         // font-family: $body-font;
         color: rgb(224, 224, 224);
       }
