@@ -3,32 +3,50 @@
   .blue-container {
     background-color: $blue;
     color: white;
-    height: calc(72% - 8rem);
-    padding: 2rem;
-    padding-top: 6rem;
+    height: 54vh;
+    padding: 8vh 8vw;
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1vh;
     overflow: hidden;
     position: relative;
     .logo {
       display: flex;
       align-items: center;
       justify-content: center;
-
+      z-index: 2;
     }
     .content {
       display: flex;
       flex-direction: column;
       row-gap: 12px;
-      .title {
-        font-size: 1.6rem;
 
+      .title {
+        z-index: 2;
+        font-size: 1.6rem;
       }
       .desc {
-        font-size: 1.1rem;
+        z-index: 2;
+        font-size: 1rem;
         color: rgb(224, 224, 224);
+      }
+      @media (min-width: 720px) {
+        .title {
+          font-size: 1.8rem;
+        }
+        .desc {
+          font-size: 1.2rem;
+        }
+      }
+      @media (min-width: 1080px) {
+        .title {
+          font-size: 2rem;
+        }
+        .desc {
+          font-size: 1.4rem;
+        }
       }
 
     }
@@ -36,7 +54,6 @@
       display: flex;
       flex-direction: column;
       z-index: 2;
-
       .count {
         font-size: 3rem;
         font-weight: 700;
@@ -45,18 +62,46 @@
         font-size: 3rem;
         font-weight: 400;
       }
-    }
+      @media (min-width: 720px) {
+        .count {
+          font-size: 3.2rem;
+        }
+        .text {
+          font-size: 3.2rem;
+        }
+      }
 
+      @media (min-width: 1080px) {
+        .count {
+          font-size: 3.5rem;
+        }
+
+        .text {
+          font-size: 3.5rem;
+        }
+      }
+    }
     .deco {
-      height: 28vh;
+      height: 50vh;
       width: 200vw;
       background-color: $dark-blue;
       position: absolute;
-      bottom: -15vh;
+      bottom: -35vh;
       left: -50vw;
       transform: rotate(-17deg);
     }
-
+    @media (min-width: 720px) {
+      .deco {
+        bottom: -30vh;
+        transform: rotate(-15deg);
+      }
+    }
+    @media (min-width: 1080px) {
+      .deco {
+        bottom: -25vh;
+        transform: rotate(-12deg);
+      }
+    }
   }
   .form-container {
     display: flex;
@@ -67,7 +112,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
-      width: 80vw;
+      width: 84vw;
       padding-bottom: 1rem;
       #email-label {
         font-size: 1rem;
