@@ -1,8 +1,22 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="form"
 export default class extends Controller {
+  static targets = ["label", "input"]
+  connect() {
+    console.log(this.labelTarget);
+    console.log(this.inputTarget);
+  }
+
   submitForm() {
     this.element.submit();
   }
+
+  focusOut() {
+    this.labelTarget.classList.remove("active");
+  }
+
+  focusIn() {
+    this.labelTarget.classList.add("active");
+  }
+
 }

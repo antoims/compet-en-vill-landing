@@ -15,10 +15,7 @@
 
       <p class="desc">
         Compet’ en Vill’ est une application gratuite pour faciliter l’organisation des rencontres entre vos équipes !
-        Réunissez vous sur les city-stades pour jouer à plusieurs contre les équipes prêtes à vous affronter.
-        <br>
-        <br>
-        A la fin on enregistre le score !
+        Réunissez vous sur les city-stades pour jouer à plusieurs contre les équipes prêtes à vous affronter et enregistez vos scores.
       </p>
     </div>
 
@@ -31,8 +28,10 @@
 
   <div class="form-container">
     <%= form_with model: @registrant, class: "form", data: { controller: "form" } do |form| %>
-      <%= form.label :email, "Email", id: "email-label" %>
-      <%= form.text_field :email, id: "email-input", placeholder: "compet.en.vill@gmail.com" %>
+      <div id="email-div">
+        <%= form.label :email, "E-mail", id: "email-label", data: { form_target: "label"} %>
+        <%= form.text_field :email, id: "email-input", data: { form_target: "input", action: "focusin->form#focusIn focusout->form#focusOut"} %>
+      </div>
       <p id="submit" data-action="click->form#submitForm">Nous rejoindre</p>
     <% end %>
 
