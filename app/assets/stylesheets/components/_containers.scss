@@ -21,7 +21,7 @@
     .content {
       display: flex;
       flex-direction: column;
-      row-gap: 12px;
+      row-gap: 12px ;
 
       .title {
         z-index: 2;
@@ -63,7 +63,7 @@
       }
       .text {
         // font-family: $subtitle-font;
-        font-size: 3rem;
+        font-size: 2.8rem;
         font-weight: 400;
       }
       @media (min-width: 720px) {
