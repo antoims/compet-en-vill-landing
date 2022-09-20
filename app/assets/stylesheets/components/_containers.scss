@@ -115,34 +115,58 @@
     .form {
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
+      gap: 0.5rem;
       width: 84vw;
       padding-bottom: 1rem;
-      #email-label {
-        font-size: 1rem;
-        font-weight: 400;
-        color: rgba(0, 0, 0, 0.86);
-      }
-      #email-input {
-        border-radius: 3px;
-        padding: 10px;
+      #email-div {
+        position: relative;
+        height: 40px;
         border: 1px solid $blue;
-        margin-bottom: 0.4rem;
-        font-size: 1rem;
-        &:focus-visible {
-          border: 1px solid $dark-blue !important;
-          outline: none;
+        border-radius: 3px;
+
+        #email-label {
+          padding: 2px;
+          font-size: 1rem;
+          font-weight: 400;
+          color: $blue;
+          background-color: white;
+          position: absolute;
+          top: 8px;
+          left: 11px;
+          transition: 0.2s;
+          z-index: 0;
+          &.active {
+            top: -10px;
+            left: 11px;
+            font-size: 0.8rem;
+          }
+        }
+        #email-input {
+          border-radius: 3px;
+          padding: 10px;
+          font-size: 1rem;
+          margin: 0;
+          border: none;
+          width: 78vw;
+          background-color: transparent;
+          &:focus {
+            outline: none;
+          }
+          &:focus-visible {
+            outline: none;
+          }
         }
       }
       #submit {
         background-color: $blue;
         color: white;
-        border-radius: 3px !important;
+        border-radius: 3px;
         font-weight: 700;
         font-size: 1rem;
-        padding: 11px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 40px;
       }
     }
   }
