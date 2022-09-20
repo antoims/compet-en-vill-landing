@@ -12,7 +12,9 @@ export default class extends Controller {
   }
 
   focusOut() {
-    this.labelTarget.classList.remove("active");
+    if (this.inputTarget.value.length === 0) {
+      this.labelTarget.classList.remove("active");
+    }
   }
 
   focusIn() {
