@@ -1,4 +1,4 @@
-<div class="container" data-controller="hello">
+<div class="container" data-form-target="container" data-action="click->form#hidePopup">
 
   <div class="blue-container">
 
@@ -22,19 +22,19 @@
     </div>
 
     <div class="registants">
-      <h2 class="count"><%= @registrants_count %> </h2>
+      <h2 class="count" data-form-target="counter"><%= @registrants_count %> </h2>
       <h3 class="text">Participants</h3>
     </div>
 
   </div>
 
   <div class="form-container">
-    <%= form_with model: @registrant, class: "form", data: { controller: "form" } do |form| %>
+    <%= form_with model: @registrant, class: "form" do |form| %>
       <div id="email-div">
         <%= form.label :email, "E-mail", id: "email-label", data: { form_target: "label"} %>
         <%= form.text_field :email, id: "email-input", data: { form_target: "input", action: "focusin->form#focusIn focusout->form#focusOut"} %>
       </div>
-      <p id="submit" data-action="click->form#submitForm">Nous rejoindre</p>
+      <p id="submit" data-action="click->form#displayPopup">Nous rejoindre</p>
     <% end %>
 
   </div>

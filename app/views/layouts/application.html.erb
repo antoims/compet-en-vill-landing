@@ -11,7 +11,9 @@
   </head>
 
   <body>
-    <%= render "shared/flashes" %>
-    <%= yield %>
+    <div data-controller="form">
+      <%= render "shared/flashes" %>
+      <%= yield %>
+    </div>
   </body>
 </html>

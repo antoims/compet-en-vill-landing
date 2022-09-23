@@ -1,5 +1,9 @@
 .container {
   height: 100vh;
+  transition: all 0.2s;
+  &.blur {
+    filter: blur(5px);
+  }
   .blue-container {
     background-color: $blue;
     box-sizing: border-box;
@@ -52,13 +56,11 @@
 
       .title {
         z-index: 2;
-        // font-family: $title-font;
         font-size: 1.4rem;
       }
       .desc {
         z-index: 2;
         font-size: 1rem;
-        // font-family: $body-font;
         color: rgb(224, 224, 224);
       }
       @media (max-height: 700px) {
