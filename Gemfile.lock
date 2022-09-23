@@ -179,6 +179,7 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
+    ruby_http_client (3.5.5)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -193,6 +194,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sendgrid-ruby (6.6.2)
+      ruby_http_client (~> 3.4)
     slack-notifier (2.4.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
@@ -248,6 +251,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   sassc-rails
   selenium-webdriver
+  sendgrid-ruby
   slack-notifier
   sprockets-rails
   stimulus-rails
