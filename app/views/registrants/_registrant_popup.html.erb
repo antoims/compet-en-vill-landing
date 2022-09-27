@@ -1,4 +1,11 @@
 <div class="popup" data-form-target="popup">
-  <h1>Merci</h1>
-  <p><%= registrant.email %></p>
+  <h3 class="title">Merci pour la force !</h3>
+
+  <p>Tu as du recevoir un mail de confirmation à <strong class="email"><%= registrant.email %></strong></p>
+
+  <p>Nous te tiendrons au courant des actus </p>
+
+  <p>A très vite sur Compet' en Vill'</p>
+
+  <p class="btn" data-action="click->form#hidePopup"> Let's go </p>
 </div>
