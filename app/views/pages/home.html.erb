@@ -1,4 +1,7 @@
 <div class="container" data-form-target="container" data-action="click->form#hidePopup">
+  <div id="ball">
+    <%= image_tag "svg/Ball.svg" %>
+  </div>
 
   <div class="blue-container">
 
@@ -10,32 +13,35 @@
 
     <div class="content">
       <h1 class="title">
-        Vous aimez les sports collectifs comme le football&nbsp;?
+        Vous facilite l'organisation de matchs au city-stade&nbsp;!
       </h1>
 
       <p class="desc">
-        Compet’ en Vill’ est une application gratuite pour faciliter l’organisation des rencontres entre vos équipes !
-        Réunissez vous sur les city-stades pour jouer à plusieurs contre
-
-         <%#  les équipes prêtes à vous affronter et enregistez vos scores. %>
+        C'est la garantie de venir pour jouer...
+        Avec tes potes vous pourrez affronter d'autres équipes.
+        Vos scores resterons gravés sur les terrains à côté de chez vous.
       </p>
     </div>
 
     <div class="registants">
       <h2 class="count" data-form-target="counter"><%= @registrants_count %> </h2>
-      <h3 class="text">Participants</h3>
+      <h3 class="text">Déjà inscrits</h3>
+      <%# <p class="desc"> inscrits à la Newsletter pour être prévenu de la sortie! SOON</p> %>
     </div>
-
   </div>
 
-  <div class="form-container">
+  <div class="white-container">
+
+    <p class="desc">Inscris-toi pour rester informé(e), <br> Compet' en Vill' sort bientôt !</p>
+
     <%= form_with model: @registrant, class: "form" do |form| %>
       <div id="email-div">
         <%= form.label :email, "E-mail", id: "email-label", data: { form_target: "label"} %>
         <%= form.text_field :email, id: "email-input", data: { form_target: "input", action: "focusin->form#focusIn focusout->form#focusOut"} %>
       </div>
-      <p id="submit" data-action="click->form#displayPopup">Nous rejoindre</p>
+      <p id="submit" data-action="click->form#displayPopup">Rejoins nous</p>
     <% end %>
+
 
   </div>
 

@@ -1,5 +1,6 @@
 class RegistrantNotifierMailer < ApplicationMailer
-    default from: 'benjbdk@gmail.com'
+  # default from: 'contact@competenvill.com'
+  default from: 'benjbdk@gmail.com'
 
   def send_welcome_email(registrant)
     @registrant = registrant

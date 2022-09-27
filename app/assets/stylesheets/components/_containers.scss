@@ -1,22 +1,33 @@
 .container {
   height: 100vh;
   transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  #ball {
+    position: absolute;
+    right: -23px;
+    top: calc(70vh - 50px);
+    width: 100px;
+    z-index: 10000;
+
+
+  }
   &.blur {
     filter: blur(5px);
   }
   .blue-container {
+    position: relative;
+    overflow: hidden;
     background-color: $blue;
     box-sizing: border-box;
     color: white;
-    height: 72vh;
+    height: 70vh;
     padding: 2em;
     padding-top: 5em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 1vh;
-    overflow: hidden;
-    position: relative;
     @media (max-height: 700px) {
       padding: 1em 2em;
       padding-top: 2em;
@@ -100,6 +111,7 @@
         font-weight: 700;
         line-height: 1;
       }
+
       .text {
         font-size: 2.8rem;
         font-weight: 400;
@@ -161,17 +173,41 @@
       }
     }
   }
-  .form-container {
+  .ball-container {
+    height: 0;
+    width: 100vw;
+    position: relative;
+    overflow: hidden visible;
+    img {
+      position: absolute;
+      right: -10px;
+      bottom: -30px;
+      height: 100px;
+      z-index: 3;
+    }
+  }
+  .white-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 28vh;
+    gap: 1rem;
+    padding: 1rem;
+    height: 30vh;
+    width: 100vw;
+    box-sizing: border-box;
     background-color: white;
+    position: relative;
+    overflow: hidden;
+
+
+    .desc {
+      color: rgba(0, 0, 0, 0.895);
+
+    }
     .form {
       display: flex;
       flex-direction: column;
       gap: 0.7rem;
-      width: 84vw;
       padding-bottom: 1rem;
       #email-div {
         position: relative;
@@ -203,9 +239,9 @@
           font-size: 1rem;
           margin: 0;
           border: none;
-          width: 80vw;
           background-color: transparent;
           z-index: 2;
+          width: 100%;
           &:focus {
             outline: none;
           }
@@ -226,6 +262,7 @@
         height: 40px;
       }
     }
+
   }
 }
 
