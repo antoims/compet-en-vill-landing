@@ -49,4 +49,7 @@ h3 {
   padding: 0.2rem;
   color: white;
   z-index: -1;
+  @media (min-height: 720px) {
+    bottom: 2vh;
+  }
 }
