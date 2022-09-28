@@ -3,6 +3,10 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["label", "input", "container", "popup", "counter", "notice"]
 
+  connect() {
+    // console.log("toto");
+  }
+
   focusOut() {
     if (this.inputTarget.value.length === 0) {
       this.labelTarget.classList.remove("active");
