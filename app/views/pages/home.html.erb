@@ -18,7 +18,7 @@
 
       <p class="desc">
         C'est la garantie de venir pour jouer...
-        Avec tes potes vous pourrez affronter d'autres équipes.
+        Avec tes potes, vous pourrez affronter d'autres équipes.
         Vos scores resterons gravés sur les terrains à côté de chez vous.
       </p>
     </div>
@@ -31,6 +31,9 @@
   </div>
 
   <div class="white-container">
+    <div id="ball-laptop">
+      <%= image_tag "svg/Ball.svg" %>
+    </div>
 
     <p class="desc">Inscris-toi pour rester informé(e), <br> Compet' en Vill' sort bientôt !</p>
 
@@ -39,7 +42,7 @@
         <%= form.label :email, "E-mail", id: "email-label", data: { form_target: "label"} %>
         <%= form.text_field :email, id: "email-input", data: { form_target: "input", action: "focusin->form#focusIn focusout->form#focusOut"} %>
       </div>
-      <p id="submit" data-action="click->form#displayPopup">Rejoins nous</p>
+      <p id="submit" data-action="click->form#displayPopup">Rejoins-nous</p>
     <% end %>
 
 
