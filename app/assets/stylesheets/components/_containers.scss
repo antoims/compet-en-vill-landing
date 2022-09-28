@@ -21,7 +21,7 @@
     color: white;
     height: 71vh;
     padding: 2em;
-    padding-top: 5em;
+    padding-top: 4em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -122,7 +122,7 @@
       width: 200vw;
       background-color: $dark-blue;
       position: absolute;
-      bottom: -35vh;
+      bottom: -34vh;
       left: -50vw;
       transform: rotate(-16deg);
     }
@@ -149,7 +149,7 @@
     width: 100vw;
     box-sizing: border-box;
     background-color: white;
-    @media (max-width: 1080px) {
+    @media (max-width: 1024px) {
       #ball-laptop {
         display: none;
       }
@@ -232,7 +232,7 @@ input:-webkit-autofill:active {
 
 // for laptop
 
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
   .container {
     display: flex;
     padding: 0 4em;
