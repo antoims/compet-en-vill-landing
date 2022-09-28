@@ -166,11 +166,9 @@
       #email-div {
         position: relative;
         height: 40px;
-        border: 1px solid $blue;
-        border-radius: 3px;
         display: flex;
         #email-label {
-          padding: 2px;
+          padding: 1.5px;
           font-size: 1rem;
           font-weight: 400;
           color: $blue;
@@ -196,8 +194,10 @@
           background-color: transparent;
           z-index: 2;
           width: 100%;
+          border: 1px solid $blue;
           &:focus {
             outline: none;
+            border: 1.5px solid $blue;
           }
           &:focus-visible {
             outline: none;
@@ -214,6 +214,7 @@
         justify-content: center;
         align-items: center;
         height: 40px;
+        cursor: pointer;
       }
     }
 
@@ -272,15 +273,15 @@ input:-webkit-autofill:active {
       }
       .registants {
         .count {
-          font-size: 4.5rem;
+          font-size: 5rem;
         }
         .text {
-          font-size: 3.5rem;
+          font-size: 4rem;
         }
       }
     }
     .white-container {
-      width: 55vw;
+      width: 57vw;
       height: 50vh;
       position: relative;
       padding: 3rem;
