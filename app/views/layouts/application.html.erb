@@ -10,11 +10,11 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <div data-controller="form">
+  <body class="toto" data-controller="form" data-form-target="body">
+
       <%= render "shared/flashes" %>
       <%= yield %>
-    </div>
+
       <div class="footer">
         <p>contact@competenvill.com</p>
         <p>Compet' en Vill', 2022 </p>
