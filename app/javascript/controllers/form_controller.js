@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["label", "input", "container", "popup", "counter", "notice", "body"]
+  static targets = ["label", "input", "container", "popup", "counter", "notice"]
 
   focusOut() {
     if (this.inputTarget.value.length === 0) {
@@ -31,7 +31,6 @@ export default class extends Controller {
     .then(response => response.json())
     .then((data) => {
       if (data.status) {
-        this.bodyTarget.classList.add("no-scroll")
         this.inputTarget.value = ''
         this.labelTarget.classList.remove("active");
         this.counterTarget.innerHTML = data.counter
@@ -50,7 +49,6 @@ export default class extends Controller {
 
 
   hidePopup() {
-    this.bodyTarget.classList.remove("no-scroll")
     this.containerTarget.classList.remove("blur")
     if (this.hasPopupTarget) {
       this.popupTarget.remove()
