@@ -23,7 +23,7 @@
     margin: 0 auto;
   }
   strong {
-    color: $dark-blue;
+    color: $blue;
   }
   .btn {
     padding: 12px 24px;
@@ -34,7 +34,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
+}
+
+@media (min-width: 1080px) {
+  .popup {
+    width: 45vw;
+    height: 65vh;
+    padding: 2.5rem;
+    .title {
+      font-size: 2.3rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
 }
 
 @keyframes popup-pop-in {

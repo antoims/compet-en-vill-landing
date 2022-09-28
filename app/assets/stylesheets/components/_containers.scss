@@ -1,19 +1,17 @@
 .container {
   height: 100vh;
-  transition: all 0.2s;
+  transition: filter 0.2s;
   position: relative;
   overflow: hidden;
+  &.blur {
+    filter: blur(5px);
+  }
   #ball {
     position: absolute;
     right: -23px;
-    top: calc(70vh - 50px);
+    top: calc(71vh - 50px);
     width: 100px;
     z-index: 10000;
-
-
-  }
-  &.blur {
-    filter: blur(5px);
   }
   .blue-container {
     position: relative;
@@ -21,7 +19,7 @@
     background-color: $blue;
     box-sizing: border-box;
     color: white;
-    height: 70vh;
+    height: 71vh;
     padding: 2em;
     padding-top: 5em;
     display: flex;
@@ -36,9 +34,6 @@
       padding: 3em;
     }
 
-    @media (min-width: 1080px) {
-      padding: 3em;
-    }
     .logo {
       display: flex;
       align-items: center;
@@ -52,14 +47,10 @@
       @media (min-width: 720px) {
         width: 20em;
       }
-      @media (min-width: 1080px) {
-        width: 23em;
-      }
       .logo-img {
         width: 100%;
       }
     }
-
     .content {
       display: flex;
       flex-direction: column;
@@ -91,15 +82,6 @@
           font-size: 1.1rem;
         }
       }
-      @media (min-width: 1080px) {
-        .title {
-          font-size: 1.8rem;
-        }
-        .desc {
-          font-size: 1.3rem;
-        }
-      }
-
 
     }
     .registants {
@@ -134,16 +116,6 @@
           font-size: 3.2rem;
         }
       }
-
-      @media (min-width: 1080px) {
-        .count {
-          font-size: 3.5rem;
-        }
-
-        .text {
-          font-size: 3.5rem;
-        }
-      }
     }
     .deco {
       height: 50vh;
@@ -166,25 +138,6 @@
         transform: rotate(-15deg);
       }
     }
-    @media (min-width: 1080px) {
-      .deco {
-        bottom: -25vh;
-        transform: rotate(-12deg);
-      }
-    }
-  }
-  .ball-container {
-    height: 0;
-    width: 100vw;
-    position: relative;
-    overflow: hidden visible;
-    img {
-      position: absolute;
-      right: -10px;
-      bottom: -30px;
-      height: 100px;
-      z-index: 3;
-    }
   }
   .white-container {
     display: flex;
@@ -192,14 +145,15 @@
     justify-content: center;
     gap: 1rem;
     padding: 1rem;
-    height: 30vh;
+    height: 29vh;
     width: 100vw;
     box-sizing: border-box;
     background-color: white;
-    position: relative;
-    overflow: hidden;
-
-
+    @media (max-width: 1080px) {
+      #ball-laptop {
+        display: none;
+      }
+    }
     .desc {
       color: rgba(0, 0, 0, 0.895);
 
@@ -212,11 +166,9 @@
       #email-div {
         position: relative;
         height: 40px;
-        border: 1px solid $blue;
-        border-radius: 3px;
         display: flex;
         #email-label {
-          padding: 2px;
+          padding: 1.5px;
           font-size: 1rem;
           font-weight: 400;
           color: $blue;
@@ -242,8 +194,10 @@
           background-color: transparent;
           z-index: 2;
           width: 100%;
+          border: 1px solid $blue;
           &:focus {
             outline: none;
+            border: 1.5px solid $blue;
           }
           &:focus-visible {
             outline: none;
@@ -260,6 +214,7 @@
         justify-content: center;
         align-items: center;
         height: 40px;
+        cursor: pointer;
       }
     }
 
@@ -273,4 +228,78 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 60px white inset !important;
   background-color: white !important;
   background-clip: content-box !important;
+}
+
+// for laptop
+
+@media (min-width: 1080px) {
+  .container {
+    display: flex;
+    padding: 0 4em;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    gap: 2vw;
+    #ball {
+      display: none;
+    }
+    .blue-container {
+      justify-content: center;
+      gap: 13vh;
+      padding: 0;
+      height: 100%;
+      overflow: visible;
+      .deco {
+        position: fixed;
+        height: 70vh;
+        bottom: -26vh;
+        transform: rotate(-13deg);
+      }
+      .logo {
+        width: 21em;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+
+        .title {
+          font-size: 2rem;
+        }
+
+        .desc {
+          font-size: 1.2rem;
+        }
+      }
+      .registants {
+        .count {
+          font-size: 5rem;
+        }
+        .text {
+          font-size: 4rem;
+        }
+      }
+    }
+    .white-container {
+      width: 57vw;
+      height: 50vh;
+      position: relative;
+      padding: 3rem;
+      border-radius: 9px;
+      box-sizing: border-box;
+      margin: auto 0;
+      gap: 1.5rem;
+      #ball-laptop {
+        position: absolute;
+        top: -30px;
+        right: -15px;
+        width: 100px;
+
+      }
+      .desc {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
 }
