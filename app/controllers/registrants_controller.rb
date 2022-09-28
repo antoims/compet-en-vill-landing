@@ -5,7 +5,7 @@ class RegistrantsController < ApplicationController
 
     if @registrant.save
       SlackNotificationService.new(@registrant).call
-      RegistrantNotifierMailer.send_welcome_email(@registrant).deliver
+      RegistrantNotifierMailer.send_welcome_email(@registrant).deliver_later
       render json: {
         status: true,
         popup: render_to_string(partial: "registrant_popup", locals: { registrant: @registrant }),
