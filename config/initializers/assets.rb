@@ -14,3 +14,4 @@ DEFAULT_META = YAML.load_file(Rails.root.join("config/meta.yml"))
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+# put this into an initializer

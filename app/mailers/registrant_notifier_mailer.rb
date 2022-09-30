@@ -3,7 +3,7 @@ class RegistrantNotifierMailer < ApplicationMailer
     @registrant = registrant
     mail(
       to: @registrant.email,
-      subject: 'Thanks for signing up for our amazing app'
+      subject: "🇫🇷 Bienvenue dans l'aventure Compet' en Vill' .22 ⚽️ 🏀"
     )
   end
 end
