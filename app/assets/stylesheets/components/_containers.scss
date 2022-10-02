@@ -252,7 +252,7 @@ input:-webkit-autofill:active {
       .deco {
         position: fixed;
         height: 70vh;
-        bottom: -26vh;
+        bottom: -30vh;
         transform: rotate(-13deg);
       }
       .logo {
@@ -272,6 +272,9 @@ input:-webkit-autofill:active {
         }
       }
       .registants {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: baseline;
         .count {
           font-size: 5rem;
         }
