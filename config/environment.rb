@@ -1,7 +1,7 @@
 # Load the Rails application.
 require_relative "application"
 
-## sendgrid
+## Sendgrid
 
 # ActionMailer::Base.smtp_settings = {
 #   user_name: 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
