@@ -13,7 +13,6 @@ require_relative "application"
 #   enable_starttls_auto: true
 # }
 
-
 Rails.application.configure do
   ## Sendinblue
   config.action_mailer.raise_delivery_errors = true

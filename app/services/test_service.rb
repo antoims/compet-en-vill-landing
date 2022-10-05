@@ -10,11 +10,11 @@ class TestService
     send_smtp_email = {
       sender: {
         name: "Test",
-        email: "benjbdk@gmail.com"
+        email: "antoine.gros14@gmail.com"
       },
       to: [
         {
-          email: "benjbdk@gmail.com"
+          email: "antoine.gros14@gmail.com"
         }
       ],
       html_content: "Hello, <br> This is a test email",

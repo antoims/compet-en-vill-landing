@@ -1,4 +1,5 @@
 class RegistrantNotifierMailer < ApplicationMailer
+
   def send_welcome_email(registrant)
     @registrant = registrant
     mail(

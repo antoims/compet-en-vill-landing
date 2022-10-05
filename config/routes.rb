@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "pages#home"
 
-  resources :registrants, only: [:create]
+  resources :registrants, only: %i[create]
 end
