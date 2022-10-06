@@ -62,18 +62,18 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "compet_en_vill_landing_production"
 
-  config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
   # config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'compet-en-vill-landing.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://compet-en-vill-landing.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_caching = false
 
   ActionMailer::Base.smtp_settings = {
-    user_name: ENV['SENDINBLUE_USERNAME'],
+    user_name: ENV['SENDINBLUE_EMAIL'],
     password: ENV['SENDINBLUE_PASSWORD'],
     address: 'smtp-relay.sendinblue.com',
     domain: 'compet-en-vill-landing.herokuapp.com',
