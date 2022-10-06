@@ -69,17 +69,17 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'compet-en-vill-landing.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://compet-en-vill-landing.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
-    :user_name      => ENV['SENDINBLUE_USERNAME'],
-    :password       => ENV['SENDINBLUE_PASSWORD'],
-    :address        => 'smtp-relay.sendinblue.com',
-    :domain         => 'compet-en-vill-landing.herokuapp.com',
-    :port           => '587',
-    :authentication => :plain,
-    :enable_starttls_auto => true
+    user_name: ENV['SENDINBLUE_USERNAME'],
+    password: ENV['SENDINBLUE_PASSWORD'],
+    address: 'smtp-relay.sendinblue.com',
+    domain: 'compet-en-vill-landing.herokuapp.com',
+    port: '587',
+    authentication: :plain,
+    enable_starttls_auto: true
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
