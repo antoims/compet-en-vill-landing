@@ -6,34 +6,32 @@ class RegistrantsController < ApplicationController
 
     if @registrant.save
       SlackNotificationService.new(@registrant).call
-      RegistrantNotifierMailer.send_welcome_email(@registrant).deliver_later
+      SendEmailService.new(@registrant).call
       render json: {
         status: true,
-        popup: render_to_string(partial: "registrant_popup", locals: { registrant: @registrant }),
+        popup: render_to_string(partial: 'registrant_popup', locals: { registrant: @registrant }),
         counter: Registrant.count
       }
     else
       render json: {
-        alert: render_to_string(partial: "shared/flashes", locals: { alert: translate_error(@registrant.errors.messages[:email].first)})
+        alert: render_to_string(partial: 'shared/flashes', locals: { alert: translate_error(@registrant.errors.messages[:email].first)})
       }
     end
-
   end
 
   private
 
   def translate_error(error)
     case error
-    when "has already been taken"
-      "Cette adresse mail est déjà utilisée."
+    when 'has already been taken'
+      'Cette adresse mail est déjà utilisée.'
     when "can't be blank"
-      "Veuillez renseigner une adresse email."
+      'Veuillez renseigner une adresse email.'
     when "L'adresse mail n'est pas valide"
       error
     else
-      "Une erreur est survenue, veuillez réessayer."
+      'Une erreur est survenue, veuillez réessayer.'
     end
-
   end
 
   def registrant_params
