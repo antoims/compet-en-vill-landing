@@ -67,20 +67,36 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  # config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'https://compet-en-vill-landing.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
+  # # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default_url_options = { host: 'https://compet-en-vill-landing.herokuapp.com' }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.perform_caching = false
+
+  # ActionMailer::Base.smtp_settings = {
+  #   user_name: ENV['SENDINBLUE_EMAIL'],
+  #   password: ENV['SENDINBLUE_PASSWORD'],
+  #   address: 'smtp-relay.sendinblue.com',
+  #   domain: 'compet-en-vill-landing.herokuapp.com',
+  #   port: '587',
+  #   authentication: :plain,
+  #   enable_starttls_auto: true
+  # }
+
   config.action_mailer.perform_caching = false
 
-  ActionMailer::Base.smtp_settings = {
-    user_name: ENV['SENDINBLUE_EMAIL'],
-    password: ENV['SENDINBLUE_PASSWORD'],
+  config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
     address: 'smtp-relay.sendinblue.com',
     domain: 'compet-en-vill-landing.herokuapp.com',
-    port: '587',
-    authentication: :plain,
-    enable_starttls_auto: true
+    port: 587
   }
+  config.action_mailer.default_url_options = { host: 'https://compet-en-vill-landing.herokuapp.com' }
+  config.active_support.deprecation = :log
+  config.active_record.migration_error = :page_load
+
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
