@@ -2,7 +2,7 @@ class RegistrantsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
 
   def create
-    @registrant = Registrant.new(registrant_params)
+    @registrant = Registrant.new(email: registrant_params[:email].downcase.strip)
 
     if @registrant.save
       SlackNotificationService.new(@registrant).call
